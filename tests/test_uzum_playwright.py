@@ -1,5 +1,6 @@
 import pytest
 from playwright.sync_api import Page, expect
+from re import compile as re_compile
 
 def test_uzum_e2e_playwright(page: Page):
     """
@@ -80,5 +81,3 @@ def test_uzum_e2e_playwright(page: Page):
     page.wait_for_timeout(5000)
     
     print("Test completed.")
-
-from re import compile as re_compile
