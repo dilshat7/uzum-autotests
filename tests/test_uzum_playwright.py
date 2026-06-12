@@ -9,7 +9,7 @@ def test_uzum_e2e_playwright(page: Page):
     """
     # 1. Заходим на https://uzum.uz/ru
     print("1. Opening Uzum.uz...")
-    page.goto("https://uzum.uz/ru")
+    page.goto("https://uzum.uz/ru", wait_until="domcontentloaded")
     
     # 2. Если уточняет город, нажимаем "Да"
     print("2. Checking for location confirmation...")
